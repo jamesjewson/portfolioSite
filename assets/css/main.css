@@ -12,12 +12,13 @@
 
 :root{
 	--color1: #301B3F;
-	--color2: #ffffff;
+	--color2: #ffffff; /*Style 2*/
 	--color3: #151515;
 	--color4: #3e4094;
 	--color5: #312450;
-	--color6: #553373;
-	--color7: #BC6FF1;
+	--color6: #553373; /*Style 4, style3 icon*/
+	--color7: #b74e91; /*Style 3 Original*/
+	--color7: #312450; /*Style 3*/
 }
 
 
@@ -1998,7 +1999,8 @@ input, select, textarea {
 
 		.button.resume{
 			margin-left: 2em;
-			margin-top: -0.5em;
+			margin-top: -2.5em;
+			margin-bottom: 2em;
 			background-color: var(--color6);
 			background-color: rgba(255, 255, 255, 0.05);
 			border-color: rgba(255, 255, 255, 0.15) !important;
@@ -2579,8 +2581,9 @@ input, select, textarea {
 				}
 
 				.wrapper.style3 .icon.major:before {
-					color: #b74e91;
+					color: var(--color6);
 				}
+
 
 				.wrapper.style3-alt .icon.major:before {
 					color: #953d75;
@@ -2863,11 +2866,12 @@ input, select, textarea {
 	}
 
 		ul.menu > li {
-			border-left: solid 1px rgba(255, 255, 255, 0.15);
+			/* border-left: solid 1px rgba(255, 255, 255, 0.15); */
 			display: inline-block;
 			line-height: 1;
-			margin-left: 1.5em;
-			padding: 0 0 0 1.5em;
+			margin-left: 0em;
+			margin-left: 0em;
+			padding: 0;
 		}
 
 			ul.menu > li:first-child {
@@ -3052,7 +3056,7 @@ input, select, textarea {
 				-ms-transition: opacity 1s ease;
 				transition: opacity 1s ease;
 				/* background: rgba(49, 36, 80, 0.9); */
-				background: rgba(255,255, 255, 0.9);
+				background: rgba(21,21, 21, 1);
 				content: '';
 				display: block;
 				height: 100%;
@@ -3093,15 +3097,14 @@ input, select, textarea {
 				transition: opacity 1s ease, transform 1s ease;
 				opacity: 1;
 			}
-
+/* Shading to Nth child */
 		.spotlights > section:nth-child(2) {
-			background-color: rgba(0, 0, 0, 0.05);
+			/* background-color: rgba(0, 0, 0, 0.05); */
 		}
 
 		.spotlights > section:nth-child(3) {
-			background-color: rgba(0, 0, 0, 0.1);
+			/* background-color: rgba(0, 0, 0, 0.1); */
 		}
-
 		.spotlights > section.inactive > .image:before,
 		body.is-preload .spotlights > section > .image:before {
 			opacity: 1;
@@ -3242,7 +3245,7 @@ input, select, textarea {
 			width: 75em;
 		}
 		.wrapper > .inner.footerPadding {
-			padding: 2em 5em .25em 5em ;
+			padding: 1em 5em .1em 5em ;
 			max-width: 100%;
 			width: 75em;
 		}
@@ -3287,6 +3290,7 @@ input, select, textarea {
 		.wrapper.style2 {
 			background-color: #5052b5;
 			background-color: var(--color2);
+			background-color: var(--color3);
 		}
 
 		.wrapper.style2-alt {
@@ -3294,7 +3298,8 @@ input, select, textarea {
 		}
 
 		.wrapper.style3 {
-			background-color: #b74e91;
+			background-color: var(--color7);
+			background-color: var(--color3);
 		}
 
 		.wrapper.style3-alt {
@@ -3303,9 +3308,11 @@ input, select, textarea {
 
 		.wrapper.style4{
 			background-color: var(--color6);
+			background-color: var(--color1);
 		}
 		.wrapper.style5{
 			background-color: var(--color6);
+			background-color: var(--color3);
 		}
 
 		.wrapper.fullscreen {
@@ -3570,6 +3577,7 @@ input, select, textarea {
 		color: rgba(255, 255, 255, 0.55);
 
 	}
+
 
 /* Sidebar */
 
@@ -3929,6 +3937,47 @@ input, select, textarea {
 
 		}
 
+		#one{
+			background-attachment: fixed;
+			background-image: url("images/black_lines.svg");
+			background-image: url("images/intro.svg");
+			background-position: top right;
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+		}
+		#two{
+			background-attachment: fixed;
+			background-image: url("images/intro.svg");
+			background-position: top right;
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+		}
+		#three{
+			background-attachment: fixed;
+			background-image: url("images/intro.svg");
+			background-position: top right;
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+		}
+
+		#four{
+			background-attachment: fixed;
+			background-image: url("images/intro.svg");
+			background-position: top right;
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+		}
+		/* #footer{
+			background-attachment: fixed;
+			background-image: url("images/intro.svg");
+			background-position: top right;
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+		} */
+
+
+		
+
 /* Intro */
 
 	#intro {
@@ -4003,4 +4052,58 @@ input, select, textarea {
 
 		.blackbutton::after{
 			background: black;
+		}
+
+
+		/* Horizontal Rule after each portfolio item */
+		.portfolio-item-block::before {
+			background-image: -moz-linear-gradient(to right, #5e42a6, #b74e91);
+			background-image: -webkit-linear-gradient(to right, #5e42a6, #b74e91);
+			background-image: -ms-linear-gradient(to right, #5e42a6, #b74e91);
+			background-image: linear-gradient(to right, #5e42a6, #b74e91);
+			-moz-transition: max-width 0.2s ease;
+			-webkit-transition: max-width 0.2s ease;
+			-ms-transition: max-width 0.2s ease;
+			transition: max-width 0.2s ease;
+			/* border-radius: 0.2em; */
+			bottom: 47%;
+			content: '';
+			height: 0.2em;
+			position: absolute;
+			margin-left: 18em;
+			/* right:0; */
+			width: 50%;
+		}
+
+		.divider{
+			background-image: -moz-linear-gradient(to right, #5e42a6, #b74e91);
+			background-image: -webkit-linear-gradient(to right, #5e42a6, #b74e91);
+			background-image: -ms-linear-gradient(to right, #5e42a6, #b74e91);
+			background-image: linear-gradient(to right, #5e42a6, #b74e91);
+			-moz-transition: max-width 0.2s ease;
+			-webkit-transition: max-width 0.2s ease;
+			-ms-transition: max-width 0.2s ease;
+			transition: max-width 0.2s ease;
+			height: 0.2em;
+			position: absolute;
+			margin-left: 18em;
+			width: 50%;
+		}
+
+		.footerMenu{
+			font-size: 0.8em;
+		}
+
+		.information{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			padding-bottom: 1.25em;
+		}
+
+		.inner.short-inner{
+			padding-bottom: 0;
+		}
+		.inner.short-inner > h1{
+			margin-bottom: 0;
 		}
