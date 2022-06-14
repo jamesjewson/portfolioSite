@@ -2220,6 +2220,8 @@ input, select, textarea {
 						border-top-width: 0 !important;
 					}
 
+			
+
 		}
 
 		@media screen and (max-width: 736px) {
@@ -2644,6 +2646,17 @@ input, select, textarea {
 				width: 100%;
 			}
 
+			@media screen and (max-width: 736px) {
+				.image.left {
+					float: left;
+					margin: 0 1em .666em 0;
+					top: 0.25em;
+					max-width: 50%;
+				}
+
+			}
+
+
 /* List */
 
 	ol {
@@ -2694,6 +2707,12 @@ input, select, textarea {
 		dl dd {
 			margin-left: 2em;
 		}
+
+	ul.skills li {
+		font-weight: bold;
+		color: #fff;
+		/* color: red; */
+	}
 
 /* Actions */
 
@@ -3044,6 +3063,12 @@ input, select, textarea {
 			position: relative;
 			width: 30em;
 		}
+		.mobileLink img{
+			display: none;
+			/* max-width: 75vw; */
+			/* height: 50vh; */
+			/* display: none; */
+		}
 
 			.spotlights > section > .image img {
 				border-radius: 0;
@@ -3097,14 +3122,7 @@ input, select, textarea {
 				transition: opacity 1s ease, transform 1s ease;
 				opacity: 1;
 			}
-/* Shading to Nth child */
-		.spotlights > section:nth-child(2) {
-			/* background-color: rgba(0, 0, 0, 0.05); */
-		}
 
-		.spotlights > section:nth-child(3) {
-			/* background-color: rgba(0, 0, 0, 0.1); */
-		}
 		.spotlights > section.inactive > .image:before,
 		body.is-preload .spotlights > section > .image:before {
 			opacity: 1;
@@ -3134,8 +3152,15 @@ input, select, textarea {
 			}
 
 				.spotlights > section > .image {
-					width: 100%;
-					height: 50vh;
+					/* width: 50%;
+					height: 50vh; */
+					display: none;
+				}
+				.mobileLink img{
+					display: block;
+					max-width: 75vw;
+					/* height: 50vh; */
+					/* display: none; */
 				}
 
 				.spotlights > section > .content {
@@ -4107,3 +4132,5 @@ input, select, textarea {
 		.inner.short-inner > h1{
 			margin-bottom: 0;
 		}
+
+
